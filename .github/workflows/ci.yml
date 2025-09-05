@@ -37,4 +37,4 @@ jobs:
           aws-region: us-east-2
 
       - name: Sync files to S3
-        run: aws s3 sync dist/ s3://${{ secrets.AWS_S3_BUCKET_NAME }} --delete
+        run: aws s3 sync ./app/dist/ s3://${{ secrets.AWS_S3_BUCKET_NAME }} --delete
