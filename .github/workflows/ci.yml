@@ -33,7 +33,7 @@ jobs:
         uses: aws-actions/s3-sync@v2
         with:
           source-dir: './app/dist'
-          bucket: 'seu-bucket-aqui'
+          bucket: '${{ secrets.AWS_S3_BUCKET_NAME }}'
           delete: true
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
