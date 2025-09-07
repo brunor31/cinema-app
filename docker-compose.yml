@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    container_name: my_app_vue
+    volumes:
+      - ./app:/app
+      - /app/node_modules   
+    ports:
+      - "5173:5173"
+    command: sh -c "npm install && exec npm run dev"
